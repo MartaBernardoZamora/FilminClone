@@ -1,0 +1,56 @@
+.modal{
+    width: 344px;
+    background-color: #242432;
+    border-radius: 15px;
+    overflow: hidden;
+}
+video{
+    width: 100%;
+}
+button{
+    background-color: #02FFA1;
+    color: #070613;
+    font-family: "Graphik", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+p{
+    margin: 0;
+    padding: 0.1rem 0.2rem ;
+}
+.modalInfo{
+    text-align: start;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+}
+.modalTextBold{
+    font-size: 1rem;
+    font-weight: 800;
+}
+.modalInfoVotes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+.containerRating p{
+    padding: 0.5rem 0.2rem;
+    border: 2px solid #93959C;
+    border-radius: 5px;
+}
+.containerVotes{
+    display: flex;
+    flex-direction: column;
+}
+.modalData{
+    display:flex;
+}
+.modalGenre{
+    display:flex;
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+.modalGenre p{
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 0.2rem;
+}

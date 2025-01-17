@@ -1,4 +1,22 @@
+@font-face {
+  font-family: "Graphik";
+  src: url("/assets/fonts/Graphik/Graphik-Semibold-Web.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: block
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("/assets/fonts/Graphik/Graphik-Medium-Web.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: block
+}
 #root {
+  font-family: "Graphik", Arial, Helvetica, sans-serif;
+  font-weight: 700;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
