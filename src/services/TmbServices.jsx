@@ -7,6 +7,7 @@ import axios from 'axios';
 const BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY; // Asegúrate de tener esta variable en tu archivo .env
 
+console.log(API_KEY)
 // Configuración de Axios
 const ApiClient = axios.create({
   baseURL: BASE_URL, // Establecer la base URL para todas las peticiones

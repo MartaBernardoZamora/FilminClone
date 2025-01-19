@@ -49,6 +49,5 @@ function Modal() {
             </div>
         </article>
     )
-  }
-  
-  export default Modal
+}
+export default Modal
