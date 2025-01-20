@@ -1,10 +1,10 @@
-import Modal from "./components/main/modal/Modal"
+import BodyMain from './components/main/BodyMain'
 import './App.css'
 
 function App() {
   return (
     <>
-      <Modal />
+      <BodyMain />
     </>
   )
 }
