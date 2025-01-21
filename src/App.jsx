@@ -1,10 +1,11 @@
-import BodyMain from './components/main/BodyMain'
+
 import './App.css'
+import Content from './components/content/Content'
 
 function App() {
   return (
     <>
-      <BodyMain />
+      <Content />
     </>
   )
 }

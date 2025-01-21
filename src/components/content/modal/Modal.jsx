@@ -13,7 +13,7 @@ function Modal() {
         voteRating >=5 && voteRating <7 ? "Buena":
         voteRating >=7 && voteRating <9 ? "Genial":
         "Excelente";
-    /*return (
+    return (
         <article className="modal">
             <video autoPlay muted>
                 <source src="/src/assets/video/trailerPrueba.mp4" type="video/mp4" />
@@ -46,6 +46,6 @@ function Modal() {
                 </div>
             </div>
         </article>
-    )*/
+    )
 }
 export default Modal
