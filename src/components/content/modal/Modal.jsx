@@ -1,43 +1,68 @@
+import React, { useEffect, useState } from 'react';
 import './Modal.css'
-import {getEJEMPLOPelicula } from '../../../services/TmbServices';
+import {getProductById } from '../../../services/TmbServices';
+import ReactPlayer from 'react-player/youtube'
+import { getModalData } from '../../../services/TmbServicesModal';
 
-const product=await getEJEMPLOPelicula("movie", 278);
 
-
-console.log(product);
 function Modal() {
+    const [product, setProduct]=useState();
+    useEffect(() => {
+        async function fetchProduct() {
+            try {
+                const data=await getModalData();
+                return setProduct(data); 
+            } catch (error) {
+                console.error('Error getProductById:', error);
+                throw error;
+            }
+        }
+        fetchProduct();
+    }, []);
+    if (!product) return;
+
     
-    const voteRating= product.vote_average.toFixed(1);
-    const nomRating=
-        voteRating < 5 ? "Poco recomendable" :
-        voteRating >=5 && voteRating <7 ? "Buena":
-        voteRating >=7 && voteRating <9 ? "Genial":
-        "Excelente";
+    console.log(product);
+    
+
     return (
         <article className="modal">
-            <video autoPlay muted>
-                <source src="/src/assets/video/trailerPrueba.mp4" type="video/mp4" />
-            </video>
+            <div className="divVideo">
+                <ReactPlayer 
+                    url={`https://www.youtube.com/watch?v=${"LNYwGUtXXQ0"}`}
+                    muted
+                    width="100%"
+                    config={{
+                        youtube: {
+                            playerVars: {
+                                autoplay: 1,
+                                controls: 0,
+                            }
+                        }
+                    }}
+                    style={{ pointerEvents: "none" }} 
+                />
+            </div>
             <div className="modalInfo">
                 <div className="modalInfoVotes">
                     <div className="containerRating">
-                        <p className="modalTextBold">{voteRating}</p>
+                        <p className="modalTextBold">{product.voteRating}</p>
                     </div>
                     <div className="containerVotes">
                         <p className="modalTextBold">{product.vote_count} votos</p>
-                        <p>{nomRating}</p>
+                        <p>{product.nomRating}</p>
                     </div>
                 </div>
                 <button className="modalInfoButton">VER</button>
                 <div className="modalInfoHeader">
                     <p className="modalTextBold">{product.title}</p>
                     <div className="modalData">
-                        <p >product.duration</p>
+                        <p >{product.runtime}</p>
                         <p>product.pegi</p>
                     </div>
                     <div className="modalGenre">                        
-                        {product.genre_ids.map((genre,index) =>
-                            <p key={index}>{genre}</p>
+                        {product.genres.map((genre,index) =>
+                            <p key={genre.id}>{genre.name}</p>
                         )}
                     </div>
                 </div>

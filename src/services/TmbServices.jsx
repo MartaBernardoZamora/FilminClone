@@ -16,24 +16,29 @@ const ApiClient = axios.create({
   },
 });
 
-// Función para obtener películas populares
-const getData = async (direction) => {
+// Función para llamar a la api
+async function getData(endpoint, params = {}){
   try {
-    const response = await ApiClient.get(direction); // Llamar al endpoint de películas populares
+    const response = await ApiClient.get(endpoint, { params }); // Llamar al endpoint de películas populares
     return response.data; // Devuelve los resultados de las películas populares
   } catch (error) {
-    console.error('Error al obtener películas populares:', error);
+    console.error('Error getData:', error);
     throw error; // Propaga el error para manejarlo en otro lugar si es necesario
   }
 };
-//Funcion producto individual, tipo movie /tv:
 
-export async function getEJEMPLOPelicula(productType,productId){
-  return await getData(`/${productType}/${productId}`);
+
+export function getProductById(productType, productId, params={}) {
+  return getData(`/${productType}/${productId}`, {append_to_response:params});
+}
+export function getProductsByList(productType, productList) {
+  return getData(`/${productType}/${productList}`);
+}
+export function getProductsBySearch(search){
+  return getData('/search/multi', {query:search});
+}
+export function getProductsByTrendy(productType, time='week'){
+  return getData(`/trending/${productType}/${time}`);
 }
 
-//PAsos para devolver las populares
-const getPopularMovies = await getData('/movie/popular');
-console.log(getPopularMovies)
-export const popularMovies = getPopularMovies.results;
   
