@@ -29,7 +29,7 @@ function Modal() {
         <article className="modal">
             <div className="divVideo">
                 <ReactPlayer 
-                    url={`https://www.youtube.com/watch?v=${"LNYwGUtXXQ0"}`}
+                    url={`https://www.youtube.com/watch?v=${product.key}`}
                     muted
                     width="100%"
                     config={{
@@ -37,6 +37,7 @@ function Modal() {
                             playerVars: {
                                 autoplay: 1,
                                 controls: 0,
+                                loop: 1,
                             }
                         }
                     }}
@@ -58,7 +59,7 @@ function Modal() {
                     <p className="modalTextBold">{product.title}</p>
                     <div className="modalData">
                         <p >{product.runtime}</p>
-                        <p>product.pegi</p>
+                        <p>{product.certification}</p>
                     </div>
                     <div className="modalGenre">                        
                         {product.genres.map((genre,index) =>

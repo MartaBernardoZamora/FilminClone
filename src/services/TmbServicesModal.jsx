@@ -3,8 +3,8 @@ import { getProductById } from "./TmbServices";
 
 export async function getModalData(){
     try {
-        const data=await getProductById("movie", 278, "videos, genres");
-        console.log(data);
+        const data=await getProductById("movie", 278, "videos,release_dates");
+        /*console.log(data);*/
         const {
             title,
             overview,
@@ -20,6 +20,8 @@ export async function getModalData(){
             genres,
         };
         product.key= data.videos.results[0].key;
+        const prueba = data.release_dates.results.filter(iso => iso.iso_3166_1 == "ES");
+        product.certification=prueba[0].release_dates[0].certification;
         const minutes = () => {
             const hours = Math.floor(data.runtime / 60);
             const restMinutes = data.runtime % 60; 

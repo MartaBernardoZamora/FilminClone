@@ -26,8 +26,7 @@ async function getData(endpoint, params = {}){
     throw error; // Propaga el error para manejarlo en otro lugar si es necesario
   }
 };
-
-
+const prueba=await getData('/movie/278/release_dates');
 export function getProductById(productType, productId, params={}) {
   return getData(`/${productType}/${productId}`, {append_to_response:params});
 }
