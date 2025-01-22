@@ -22,7 +22,7 @@ function Modal() {
     if (!product) return;
 
     
-    /*console.log(product);*/
+    console.log(product);
     
 
     return (
