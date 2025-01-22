@@ -22,12 +22,12 @@ function Modal() {
     if (!product) return;
 
     
-    console.log(product);
+    /*console.log(product);*/
     
 
     return (
         <article className="modal">
-            <div className="divVideo">
+            {/*<div className="divVideo">
                 <ReactPlayer 
                     url={`https://www.youtube.com/watch?v=${product.key}`}
                     muted
@@ -84,7 +84,7 @@ function Modal() {
                 <div className="modalInfoContent">
                     <p>{product.overview}</p>
                 </div>
-            </div>
+            </div>*/}
         </article>
     )
 }

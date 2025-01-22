@@ -39,5 +39,3 @@ export function getProductsBySearch(search){
 export function getProductsByTrendy(productType, time='week'){
   return getData(`/trending/${productType}/${time}`);
 }
-
-  
