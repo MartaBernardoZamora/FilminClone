@@ -3,7 +3,7 @@ import { getProductById } from "./TmbServices";
 
 export async function getModalData(){
     try {
-        const data=await getProductById("movie", 436270, "videos,release_dates");
+        const data=await getProductById("movie", 436270, "videos,release_dates");//436270, 782, 278
         /*console.log(data);*/
         const {
             title,
@@ -38,6 +38,8 @@ export async function getModalData(){
         product.nomRating=nomRating;
         return product;
     } catch (error) {
+        console.error('Error getData:', error);
+        throw error;
         
     }
 }

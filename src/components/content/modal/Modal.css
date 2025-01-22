@@ -52,6 +52,7 @@ p{
 }
 .modalData{
     display:flex;
+    margin: 0.5rem 0;
 }
 .modalGenre{
     display:flex;
