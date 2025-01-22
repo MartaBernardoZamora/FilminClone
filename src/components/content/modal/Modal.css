@@ -5,10 +5,16 @@
     overflow: hidden;
 }
 .divVideo{
-    height: 16vh;
+    height: 25vh;
     overflow: hidden;
-    display: flex;
-    align-items: center;
+    position: relative;
+}
+.divVideo > div > div{
+    height: 200% !important;
+    width: 140% !important;
+    position: relative;
+    top: -75%;
+    left: -20%;
 }
 button{
     background-color: #02FFA1;
