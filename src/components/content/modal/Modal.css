@@ -21,6 +21,15 @@ button{
     color: #070613;
     font-family: "Graphik", Arial, Helvetica, sans-serif;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 1rem;
+    justify-content: space-between;
+    border-radius: 0.3rem;
+    border: none;
+}
+button:hover{
+    background-color: #4effbe;
 }
 p{
     margin: 0;
@@ -43,7 +52,7 @@ p{
 }
 .containerRating p{
     padding: 0.5rem 0.2rem;
-    border: 2px solid #93959C;
+    border: 2px solid #93959C; /*#93959c*/
     border-radius: 5px;
 }
 .containerVotes{
@@ -54,10 +63,17 @@ p{
     display:flex;
     margin: 0.5rem 0;
 }
+.modalCertification{
+    padding: 0.2rem 0.6rem;
+    background-color: #5d606b;
+    margin: 0 1rem;
+    border-radius: 0.2rem;
+    font-size: 0.7rem;
+}
 .modalGenre{
     display:flex;
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 .modalGenre p{
     border: 1px solid white;

@@ -21,7 +21,11 @@ export async function getModalData(){
         };
         product.key= data.videos.results[0].key;
         const prueba = data.release_dates.results.filter(iso => iso.iso_3166_1 == "ES");
-        product.certification=prueba[0].release_dates[0].certification;
+        
+        const certification = prueba[0].release_dates[0].certification == "TP"
+            ? prueba[0].release_dates[0].certification
+            : `${prueba[0].release_dates[0].certification}+`;
+        product.certification=certification;
         const minutes = () => {
             const hours = Math.floor(data.runtime / 60);
             const restMinutes = data.runtime % 60; 
