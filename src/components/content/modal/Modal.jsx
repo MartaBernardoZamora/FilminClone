@@ -20,16 +20,29 @@ function Modal() {
         fetchProduct();
     }, []);
     if (!product) return;
-
+    function handleUnstarted() {
+        document.querySelector('.divVideo').style.display = 'none';
+        document.querySelector('.divImage').style.display = 'block';
+        console.log('El video está cargado pero no ha comenzado.');
+    };
+    function toggleVideo(){
+        document.querySelector('.divVideo').style.display = 'block';
+        document.querySelector('.divImage').style.display = 'none';
+    }
     
     console.log(product);
     
 
     return (
         <article className="modal">
-            {/*<div className="divVideo">
+            <div className="divImage">
+                <img src={`https://image.tmdb.org/t/p/original${product.backdrop_path}`} alt="" />
+            </div>
+            <div className="divVideo">
                 <ReactPlayer 
                     url={`https://www.youtube.com/watch?v=${product.key}`}
+                    onBufferEnd={toggleVideo}
+                    onError={handleUnstarted}
                     muted
                     width="100%"
                     config={{
@@ -45,10 +58,10 @@ function Modal() {
                             }
                         }
                     }}
-                    style={{ pointerEvents: "none" }} 
+                    style={{ pointerEvents: "none" }}
                 />
             </div>
-            <div className="modalInfo">
+           <div className="modalInfo">
                 <div className="modalInfoVotes">
                     <div className="containerRating">
                         <p className="modalTextBold">{product.voteRating}</p>
@@ -72,7 +85,7 @@ function Modal() {
                 <div className="modalInfoHeader">
                     <p className="modalTextBold">{product.title}</p>
                     <div className="modalData">
-                        <p >{product.runtime}</p>
+                        <p >{product.time}</p>
                         <p className="modalCertification">{product.certification}</p>
                     </div>
                     <div className="modalGenre">                        
@@ -84,7 +97,7 @@ function Modal() {
                 <div className="modalInfoContent">
                     <p>{product.overview}</p>
                 </div>
-            </div>*/}
+            </div>
         </article>
     )
 }
