@@ -1,11 +1,12 @@
 .modal{
     width: 344px;
     background-color: #242432;
-    border-radius: 15px;
+    border-radius: 0.5rem;
     overflow: hidden;
+    /*para ver centrado mientras pruebo*/
 }
 .divVideo, .divImage{
-    height: 25vh;
+    height: 230px;
     overflow: hidden;
     position: relative;
 }
@@ -13,7 +14,7 @@
     height: 200% !important;
     width: 140% !important;
     position: relative;
-    top: -75%;
+    top: -68%;
     left: -20%;
 }
 .divVideo{
