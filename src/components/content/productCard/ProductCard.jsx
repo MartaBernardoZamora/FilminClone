@@ -4,16 +4,15 @@ import PropTypes from 'prop-types'
 import { getModalData } from '../../../services/TmbServicesModal';
 import Modal from '../modal/Modal';
 import './ProductCard.css'
-function ProductCard() {
+
+
+function ProductCard(props) {
     const [product, setProduct] = useState();
     const [isModalVisible, setIsModalVisible] = useState(false);
-    function toggleModal() {
-        setIsModalVisible(!isModalVisible);
-    };
     useEffect(() => {
         async function fetchProduct() {
             try {
-                const data = await getModalData();
+                const data = await getModalData(props.type, props.id);
                 return setProduct(data);
             } catch (error) {
                 console.error('Error getProductById:', error);
@@ -21,7 +20,11 @@ function ProductCard() {
             }
         }
         fetchProduct();
-    }, []);
+    }, []);    
+    function toggleModal() {
+        setIsModalVisible(!isModalVisible);
+    };
+
     if (!product) return;
     return (
         <div className='carrouselCard'>
@@ -29,10 +32,15 @@ function ProductCard() {
                 onMouseEnter={toggleModal}
             >
                 <img src={`https://image.tmdb.org/t/p/original${product.poster_path}`} alt="" />
-            </div>
+                {props.type == "tv" && (<p className="isSerie">SERIE</p>)}
+            
             {isModalVisible && (
-                <Modal {...product} isModalVisible={isModalVisible} />
+                <Modal 
+                    {...product} 
+                    isModalVisible={isModalVisible}
+                    onMouseLeave={toggleModal} />
             )}
+            </div>
         </div>
 
     )

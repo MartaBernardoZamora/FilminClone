@@ -3,7 +3,12 @@
     background-color: #242432;
     border-radius: 0.5rem;
     overflow: hidden;
-    /*para ver centrado mientras pruebo*/
+    position:absolute; 
+    z-index: 9999; 
+    top:-30%;
+    left:-50%;
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+
 }
 .divVideo, .divImage{
     height: 230px;

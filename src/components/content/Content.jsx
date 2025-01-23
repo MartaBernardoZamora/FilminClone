@@ -1,10 +1,10 @@
-import Modal from './modal/Modal'
-import ProductCard from './productCard/ProductCard'
+
+import PruebaLista from './pruebaLista/PruebaLista'
 
 function Content() {
   return (
     <>
-      <ProductCard />
+      <PruebaLista />
     </>
   )
 }

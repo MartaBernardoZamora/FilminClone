@@ -4,14 +4,10 @@ import ReactPlayer from 'react-player/youtube'
 
 
 function Modal(props) {
-    const [isModalVisible, setIsModalVisible] = useState(true);
-    function toggleModal() {
-        setIsModalVisible(!isModalVisible);
-    };
+    const { onMouseLeave, isModalVisible } = props;
     function handleUnstarted() {
         document.querySelector('.divVideo').style.display = 'none';
         document.querySelector('.divImage').style.display = 'block';
-        console.log('El video está cargado pero no ha comenzado.');
     };
     function toggleVideo(){
         document.querySelector('.divVideo').style.display = 'block';
@@ -20,7 +16,7 @@ function Modal(props) {
     return (
         <>
         {isModalVisible && (
-            <article className="modal" onMouseLeave={toggleModal}>
+            <article className="modal" onMouseLeave={onMouseLeave}>
                 <div className="divImage">
                     <img src={`https://image.tmdb.org/t/p/original${props.backdrop_path}`} alt="" />
                 </div>
@@ -72,10 +68,10 @@ function Modal(props) {
                         <p className="modalTextBold">{props.title}</p>
                         <div className="modalData">
                             <p >{props.time}</p>
-                            <p className="modalCertification">{props.certification}</p>
+                            {props.certification && (<p className="modalCertification">{props.certification}</p>)}
                         </div>
                         <div className="modalGenre">                        
-                            {props.genres.map((genre,index) =>
+                            {props.genres.slice(0,3).map((genre,index) =>
                                 <p key={genre.id}>{genre.name.toUpperCase()}</p>
                             )}
                         </div>
