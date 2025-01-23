@@ -3,10 +3,11 @@
     background-color: #242432;
     border-radius: 0.5rem;
     overflow: hidden;
+    overlay: auto;
     position:absolute; 
     z-index: 9999; 
-    top:-30%;
-    left:-50%;
+    top:-20%;
+    left:-65%;
     transition: opacity 0.3s ease, transform 0.3s ease; 
 
 }
@@ -52,18 +53,18 @@ p{
 }
 .modalInfo{
     text-align: start;
-    padding: 0 1rem;
-    font-size: 0.9rem;
+    padding: 0 .8rem;
+    font-size: .8rem;
 }
 .modalTextBold{
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 800;
 }
 .modalInfoVotes {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 0.5rem 0;
+    margin: 0.3rem 0;
 }
 .containerRating p{
     padding: 0.5rem 0.2rem;
@@ -76,10 +77,10 @@ p{
 }
 .modalData{
     display:flex;
-    margin: 0.5rem 0;
+    margin: .5rem 0;
 }
 .modalCertification{
-    padding: 0.2rem 0.6rem;
+    padding: .2rem .6rem;
     background-color: #5d606b;
     margin: 0 1rem;
     border-radius: 0.2rem;
@@ -88,12 +89,12 @@ p{
 .modalGenre{
     display:flex;
     font-weight: 400;
-    font-size: 0.7rem;
+    font-size: .6rem;
 }
 .modalGenre p{
     border: 1px solid white;
     border-radius: 5px;
-    margin: 0.2rem;
+    margin: .2rem;
 }
 .modalInfoContent{
     margin: 1rem 0;

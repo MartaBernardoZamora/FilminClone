@@ -5,21 +5,6 @@ import { getModalData } from '../../../services/TmbServicesModal';
 
 
 function Modal(props) {
-    console.log(props)
-    const [product, setProduct] = useState();
-    useEffect(() => {
-        async function fetchProduct() {
-            try {
-                const data = await getModalData(props.productType, props.productId);
-                return setProduct(data);
-            } catch (error) {
-                console.error('Error getProductById:', error);
-                throw error;
-            }
-        }
-        fetchProduct();
-    }, []);
-    if (!product) return;
 
     const { onMouseLeave, isModalVisible } = props;
     function handleUnstarted() {
@@ -35,12 +20,12 @@ function Modal(props) {
         {isModalVisible && (
             <article className="modal" onMouseLeave={onMouseLeave}>
                 <div className="divImage">
-                    <img src={`https://image.tmdb.org/t/p/original${product.backdrop_path}`} alt="" />
+                    <img src={`https://image.tmdb.org/t/p/original${props.backdrop_path}`} alt="" />
                     <div className="prettyerDiv"></div>
                 </div>
                 <div className="divVideo">
                     <ReactPlayer 
-                        url={`https://www.youtube.com/watch?v=${product.videoKey}`}
+                        url={`https://www.youtube.com/watch?v=${props.videoKey}`}
                         onBufferEnd={toggleVideo}
                         onError={handleUnstarted}
                         muted
@@ -66,11 +51,11 @@ function Modal(props) {
             <div className="modalInfo">
                     <div className="modalInfoVotes">
                         <div className="containerRating">
-                            <p className="modalTextBold">{product.voteRating}</p>
+                            <p className="modalTextBold">{props.voteRating}</p>
                         </div>
                         <div className="containerVotes">
-                            <p className="modalTextBold">{product.vote_count} votos</p>
-                            <p>{product.nomRating}</p>
+                            <p className="modalTextBold">{props.vote_count} votos</p>
+                            <p>{props.nomRating}</p>
                         </div>
                     </div>
                     <button className="modalInfoButton">
@@ -85,19 +70,19 @@ function Modal(props) {
                         <p>VER</p>
                     </button>
                     <div className="modalInfoHeader">
-                        <p className="modalTextBold">{product.title}</p>
+                        <p className="modalTextBold">{props.title}</p>
                         <div className="modalData">
                             <p >{props.time}</p>
-                            {props.certification && (<p className="modalCertification">{product.certification}</p>)}
+                            {props.certification && (<p className="modalCertification">{props.certification}</p>)}
                         </div>
                         <div className="modalGenre">                        
-                            {product.genres.slice(0,3).map((genre,index) =>
+                            {props.genres.slice(0,3).map((genre,index) =>
                                 <p key={genre.id}>{genre.name.toUpperCase()}</p>
                             )}
                         </div>
                     </div>
                     <div className="modalInfoContent">
-                        <p>{product.overview}</p>
+                        <p>{props.overview}</p>
                     </div>
                 </div>
             </article>

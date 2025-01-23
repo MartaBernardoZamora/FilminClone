@@ -1,53 +1,20 @@
-/*.App {
-    text-align: center;
-  }
-    /
-  
-  .carousel-container {
-    width: 90%;
-    margin: 20px auto;
-    text-align: center;
-    height: 50vh;
-  }
-  
-  .movie-card {
-    height: 50vh;
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .movie-card img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .movie-card h3 {
-    margin: 10px 0;
-    font-size: 1.2em;
-  }
-  /*.App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}*/
 
+.swiper{
+  padding: 0 5rem;
+  box-sizing: border-box;
+  overflow: visible !important;
+}
 .carousel-container {
+  overflow-x: hidden !important;
   position: relative;
-  width: 90%;
+  width: 100%;
   max-width: 3200px;
-  margin: 0 auto;
-  /*text-align: center;*/
+  margin: 0;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-title {
-  /*position: absolute;*/ 
-  /*top: -40px;*/ 
-  /*left: 20px;*/ 
   font-size: 2em; 
   font-weight: bold; 
   color: #ffffff; 
@@ -56,7 +23,6 @@
 
 .movie-card {
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }

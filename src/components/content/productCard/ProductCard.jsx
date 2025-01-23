@@ -27,7 +27,6 @@ function ProductCard(props) {
 
     if (!product) return;
     return (
-        <div className='carrouselCard'>
             <div className="verticalCard"
                 onMouseEnter={toggleModal}
             >
@@ -38,7 +37,6 @@ function ProductCard(props) {
                     isModalVisible={isModalVisible}
                     onMouseLeave={toggleModal} />
             </div>
-        </div>
 
     )
 }

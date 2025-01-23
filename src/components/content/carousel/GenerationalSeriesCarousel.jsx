@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
 import "./GenerationalSeriesCarousel.css";
 import getGenerationalSeriesCarousel from "../../../services/TmbServicesCarousel";
-import Modal from "../modal/Modal"
+import ProductCard from "../productCard/ProductCard"
 
 const GenerationalSeriesCarousel = () => {
   const [movies, setMovies] = useState([]);
@@ -36,9 +36,7 @@ const GenerationalSeriesCarousel = () => {
   if (loading) {
     return <div className="carousel-container">Data loading...</div>;
   } 
-  function toggleModal() {
-    setIsModalVisible(!isModalVisible);
-};
+  console.log(movies)
   return (
     <div className="carousel-container">
       <h1 className="carousel-title">Series Generacionales</h1>
@@ -52,7 +50,8 @@ const GenerationalSeriesCarousel = () => {
       >
         {movies.map((movie) => (
           <SwiperSlide key={movie.id}>
-            <div className="movie-card" onMouseEnter={toggleModal}>
+            <ProductCard key={movie.id} id={movie.id} type={productType} />
+            {/*<div className="movie-card" onMouseEnter={toggleModal}>
               <img
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={movie.title}
@@ -63,7 +62,7 @@ const GenerationalSeriesCarousel = () => {
                     productType={productType}
                     isModalVisible={isModalVisible}
                     onMouseLeave={toggleModal} />
-            </div>
+            </div>*/}
           </SwiperSlide>
 
         ))}
