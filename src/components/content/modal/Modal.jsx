@@ -19,6 +19,7 @@ function Modal(props) {
             <article className="modal" onMouseLeave={onMouseLeave}>
                 <div className="divImage">
                     <img src={`https://image.tmdb.org/t/p/original${props.backdrop_path}`} alt="" />
+                    <div className="prettyerDiv"></div>
                 </div>
                 <div className="divVideo">
                     <ReactPlayer 
@@ -37,11 +38,13 @@ function Modal(props) {
                                     showinfo: 0,
                                     modestbranding: 1,
                                     playlist:props.key,
+                                    start:5,
                                 }
                             }
                         }}
                         style={{ pointerEvents: "none" }}
-                    />
+                    />                    
+                    <div className="prettyerDiv"></div>
                 </div>
             <div className="modalInfo">
                     <div className="modalInfoVotes">

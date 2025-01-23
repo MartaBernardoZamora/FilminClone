@@ -33,13 +33,10 @@ function ProductCard(props) {
             >
                 <img src={`https://image.tmdb.org/t/p/original${product.poster_path}`} alt="" />
                 {props.type == "tv" && (<p className="isSerie">SERIE</p>)}
-            
-            {isModalVisible && (
                 <Modal 
                     {...product} 
                     isModalVisible={isModalVisible}
                     onMouseLeave={toggleModal} />
-            )}
             </div>
         </div>
 

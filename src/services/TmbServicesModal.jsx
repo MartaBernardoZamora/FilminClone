@@ -3,8 +3,7 @@ import { getProductById } from "./TmbServices";
 
 export async function getModalData(productType, productId){
     try {
-        const data=await getProductById(productType, productId, "videos,release_dates,content_ratings,season/1");//436270, 782, 278,79744
-        //console.log(data)
+        const data=await getProductById(productType, productId, "videos,release_dates,content_ratings,season/1");
         const {
             overview,
             genres,

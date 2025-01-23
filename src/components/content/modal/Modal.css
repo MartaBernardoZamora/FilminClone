@@ -1,3 +1,7 @@
+#root{
+    display: flex;
+    flex-wrap: wrap;
+}
 .modal{
     width: 344px;
     background-color: #242432;
@@ -67,7 +71,7 @@ p{
 }
 .containerRating p{
     padding: 0.5rem 0.2rem;
-    border: 2px solid #93959C; /*#93959c*/
+    border: 2px solid #93959C; 
     border-radius: 5px;
 }
 .containerVotes{
@@ -97,4 +101,14 @@ p{
 }
 .modalInfoContent{
     margin: 1rem 0;
+}
+.prettyerDiv{
+    position: absolute;
+    height: 4vh;
+    z-index: 9999;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(180deg, transparent 0, RGBA(6, 6, 19, 0.03) 7%, RGBA(6, 6, 19, 0.11) 21%, RGBA(6, 6, 19, 0.61) 77%, RGBA(6, 6, 19, 0.75));
+    background-repeat: no-repeat;
 }
