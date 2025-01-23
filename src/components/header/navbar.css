@@ -1,0 +1,68 @@
+/* Estilos para el navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px; 
+  background-color: rgba(0, 0, 0, 0); /* Fondo transparente por defecto */
+  color: white;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box; 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+/* Efecto cuando el navbar se hace "scrolled" */
+.navbar.scrolled {
+  background-color: #060613; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para el navbar */
+}
+
+/* Sección de los elementos de la izquierda en el navbar */
+.navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+}
+
+/* Estilo para el logo */
+.navbar__logo img {
+  height: 28px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+/* Estilo para los links */
+.navbar__links a {
+  color: white;
+  margin: 0 18px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hover para los links */
+.navbar__links a:hover {
+  color: #02ffa1;
+}
+
+/* Perfil redondeado */
+.navbar__perfil {
+  border-radius: 50%;
+}
+
+/* Para evitar que el contenido quede oculto debajo del navbar */
+body {
+  margin-top: 80px; /* Ajusta según la altura de tu navbar */
+}
+
+/* Fondo de la página para mostrar la imagen */
+body {
+  background-image: url('ruta/a/tu/imagen-de-fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}

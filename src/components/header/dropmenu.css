@@ -1,0 +1,76 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown__toggle {
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+.dropdown__toggle:hover,
+.dropdown__toggle.active,
+.dropdown__toggle:focus {
+  outline: none; 
+}
+.dropdown__toggle:hover, .dropdown__toggle.active {
+  color: #02ffa1;
+}
+
+/* Menú desplegable */
+.dropdown__menu {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: #141426;
+  border: 1px solid #333;
+  border-radius: 3px;
+  padding: 15px 0; /* Más espacio interno para agrandar el menú */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  margin-top: 0;
+  width: 250px; /* Asegura que todo el contenido del menú se ajuste correctamente */
+  box-sizing: border-box; /* Incluye padding y border en el ancho */
+}
+
+/* Opciones del menú */
+.dropdown__menu li {
+  list-style: none;
+  margin: 0; /* Elimina márgenes adicionales */
+}
+
+/* Estilo de los enlaces en el menú */
+.dropdown__menu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 15px 20px; /* Espaciado interno uniforme */
+  font-size: 16px;
+  width: 100%; /* El hover cubrirá todo el ancho */
+  box-sizing: border-box; /* Incluye el padding en el ancho */
+}
+
+/* Elimina cualquier margen o padding sobrante del hover */
+.dropdown__menu a:hover {
+  background-color: #060613; /* Fondo al pasar el mouse */
+}
+
+/* Separación especial para "The Filmin Times" */
+.dropdown__menu li.the-filmin-times {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding: 5px 0;
+  margin: 10px 0; /* Espaciado adicional arriba y abajo */
+}
+
+/* Opciones de "The Filmin Times" con margen */
+.dropdown__menu li.the-filmin-times a {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

@@ -1,12 +1,12 @@
 
-import PruebaLista from './pruebaLista/PruebaLista'
+import Slider from './slider/Slider'
 
 function Content() {
   return (
     <>
-      <PruebaLista />
+    <Slider />
     </>
   )
 }
- 
+
 export default Content

@@ -1,0 +1,133 @@
+.footerContainer {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+    min-height: 100vh; 
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+
+.footerSection {
+    background-color: #060613;
+    color: #93959c;
+    padding: 20px 40px 30px 50px;
+    margin-top: auto; 
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    gap: 10px;
+}
+
+
+.line {
+    border: none;
+    height: 1px;
+    background-color: #3e3a3a;
+    margin: 10px 0;
+    width: 100vw;
+    position: relative;
+    left: 0;
+    left: calc(-50vw + 50%);
+    
+}
+
+.upperSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+} 
+
+.upperLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.upperLinks a {
+    color: #93959c;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    transition: color 0.3s;
+
+}
+
+.upperLinks a:hover {
+    color: #fff;
+}
+
+.teamImgContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.teamImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #93959c;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.teamImg img {
+   width: 100%;
+   height: 100%; 
+   object-fit: cover; 
+}
+
+.teamImg:hover {
+    transform: scale(1.1);
+    border-color: #fff;
+}
+
+.bottomSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bottom {
+    display: flex;
+    gap: 15px
+}
+
+.downLogos {
+    height: 40px;
+    width: auto;
+    filter: brightness(0.8);
+    transition: filter 0.2s ease;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.downLogos:hover {
+    filter: brightness(1);
+}
+    
+.footerText {
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .upperSection,
+    .bottomSection {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footerText {
+        text-align: center;
+    }
+}
