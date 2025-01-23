@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.css";
-import Logo from "./logo";
-import Links from "./links";
-import SearchIcon from "./searchicon";
+import Logo from "../logo/logo";
+import Links from "../links/links";
+import SearchIcon from "../searchicon/searchicon";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);

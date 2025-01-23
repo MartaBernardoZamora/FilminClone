@@ -17,7 +17,7 @@ const ApiClient = axios.create({
 });
 
 // Función para llamar a la api
-export async function getData(endpoint, params = {}){
+async function getData(endpoint, params = {}){
   try {
     const response = await ApiClient.get(endpoint, { params }); // Llamar al endpoint de películas populares
     return response.data; // Devuelve los resultados de las películas populares

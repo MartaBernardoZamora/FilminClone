@@ -24,7 +24,7 @@ function Subtitle({ media }) {
 }
 
 // Componente principal de la tarjeta
-function SliderCard({ media, onPlayTrailer }) {
+function SliderCard({ media }) {
   return (
     <div
       className="slider-card"
@@ -47,11 +47,7 @@ function SliderCard({ media, onPlayTrailer }) {
 
         {/* Botón para ver más detalles o el tráiler */}
         <button
-          className="slider-button"
-          onClick={() => onPlayTrailer(media.id, media.media_type)}
-        >
-          Ver Ahora
-        </button>
+          className="slider-button"> Ver Ahora </button>
       </div>
     </div>
   );
@@ -67,8 +63,7 @@ SliderCard.propTypes = {
     media_type: PropTypes.oneOf(['movie', 'tv']).isRequired,
     director: PropTypes.string,
     seasons: PropTypes.number,
-  }).isRequired,
-  onPlayTrailer: PropTypes.func.isRequired,
+  }).isRequired,  
 };
 
 Tags.propTypes = {

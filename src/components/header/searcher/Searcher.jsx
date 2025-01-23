@@ -24,7 +24,7 @@ function Searcher() {
 
   return (
     <div className="searcher-container">
-      <img src="../src/components/header/searcher/buscar.png" alt="lupa" className='searcher-icon'/><input
+      <img src="../src/images/search.png" alt="lupa" className='searcher-icon'/><input
         type="text"
         value={query}
         onChange={handleSearch}

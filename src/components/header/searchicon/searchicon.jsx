@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./searchicon.css";
-import Searcher from "./searcher/Searcher";
+import Searcher from "../searcher/Searcher";
 
 const SearchIcon = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);

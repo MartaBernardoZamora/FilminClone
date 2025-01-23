@@ -1,5 +1,5 @@
 import React from "react";
-import DropdownMenu from "./dropmenu";
+import DropdownMenu from "../dropmenu/dropmenu";
 
 const Links = () => {
   return (

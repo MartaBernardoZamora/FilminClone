@@ -70,3 +70,12 @@
   height: auto;
   display: block;
 }
+.isSerie{
+  position:absolute;
+  top:5%;
+  left:3%;
+  background-color:#242424;
+  font-weight: 800;
+  font-size: 0.7rem;
+  padding: 0.1rem;
+}

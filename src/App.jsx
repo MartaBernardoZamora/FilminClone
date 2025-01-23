@@ -1,11 +1,15 @@
 import React from "react";
 import "./App.css";
-import GenerationalSeriesCarousel from "./components/content/carousel/GenerationalSeriesCarousel"; // Убедитесь, что путь правильный
+import Footer from './components/footer/Footer'
+import Navbar from "./components/header/navbar/navbar";
+import Content from './components/content/Content'; 
 
 function App() {
   return (
     <div className="App">
-      <GenerationalSeriesCarousel />
+      <Navbar />
+      <Content />
+      <Footer />
     </div>
   );
 }

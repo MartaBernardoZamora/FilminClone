@@ -17,16 +17,17 @@
 .dropdown__toggle:hover,
 .dropdown__toggle.active,
 .dropdown__toggle:focus {
-  outline: none; 
+  outline: none;
 }
-.dropdown__toggle:hover, .dropdown__toggle.active {
+.dropdown__toggle:hover,
+.dropdown__toggle.active {
   color: #02ffa1;
 }
 
 /* Menú desplegable */
 .dropdown__menu {
   position: absolute;
-  top: 100%; 
+  top: 100%;
   left: 0;
   background-color: #141426;
   border: 1px solid #333;
@@ -34,7 +35,6 @@
   padding: 15px 0; /* Más espacio interno para agrandar el menú */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  margin-top: 0;
   width: 250px; /* Asegura que todo el contenido del menú se ajuste correctamente */
   box-sizing: border-box; /* Incluye padding y border en el ancho */
 }
