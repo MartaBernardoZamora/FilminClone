@@ -5,9 +5,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
 import "./GenerationalSeriesCarousel.css";
+import getGenerationalSeriesCarousel from "../../../services/TmbServicesCarousel";
 
-const TMDB_API_KEY = "69fb9f80ba36bf64fb8df3a0312a15e6"; 
-const TMDB_API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${TMDB_API_KEY}&language=en-US&page=1`;
+//const TMDB_API_KEY = "69fb9f80ba36bf64fb8df3a0312a15e6"; 
+//const TMDB_API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${TMDB_API_KEY}&language=en-US&page=1`;
 
 const GenerationalSeriesCarousel = () => {
   const [movies, setMovies] = useState([]);
@@ -15,12 +16,13 @@ const GenerationalSeriesCarousel = () => {
 
   const fetchMovies = async () => {
     try {
-      console.log("Fetching movies from TMDB...");
+      /*console.log("Fetching movies from TMDB...");
       const response = await fetch(TMDB_API_URL);
       const data = await response.json();
-      console.log("Fetched data:", data);
-      if (data.results) {
-        setMovies(data.results);
+      console.log("Fetched data:", data);*/
+      const data = await getGenerationalSeriesCarousel();
+      if (data) {
+        setMovies(data);
       } else {
         console.error("Movies loading error:", data);
       }
