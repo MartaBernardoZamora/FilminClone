@@ -7,6 +7,7 @@ function Content() {
     <>
     <Slider />
     <GenerationalSeriesCarousel />
+    <GenerationalSeriesCarousel />
     </>
   )
 }

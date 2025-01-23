@@ -1,47 +1,48 @@
-
-.swiper{
-  padding: 0 5rem;
-  box-sizing: border-box;
-  overflow: visible !important;
+.carousel-container .swiper{ 
+  z-index: 1; 
+  overflow: visible;
+  width: 100%;
 }
 .carousel-container {
-  overflow-x: hidden !important;
-  position: relative;
+  overflow-x: hidden;
+  /* box-sizing: border-box;
+  overflow-x: hidden;
+ position: relative;
   width: 100%;
   max-width: 3200px;
   margin: 0;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);*/
 }
 
 .carousel-title {
-  font-size: 2em; 
+  /*font-size: 2em; 
   font-weight: bold; 
   color: #ffffff; 
-  margin: 0;
+  margin: 0;*/
 }
 
-.movie-card {
-  border-radius: 10px;
+.carousel-movie-card {
+  /*border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease;*/
 }
 
-.movie-card:hover {
-  transform: scale(1.05);
+.carousel-movie-card:hover {
+  /*transform: scale(1.05);*/
 }
 
-.movie-card img {
-  width: 100%;
+.carousel-movie-card img {
+  /*width: 100%;
   height: auto;
-  display: block;
+  display: block;*/
 }
 .isSerie{
-  position:absolute;
+  /*position:absolute;
   top:5%;
   left:3%;
   background-color:#242424;
   font-weight: 800;
   font-size: 0.7rem;
-  padding: 0.1rem;
+  padding: 0.1rem;*/
 }

@@ -44,7 +44,7 @@ const GenerationalSeriesCarousel = () => {
         modules={[Navigation]}
         spaceBetween={15}
         slidesPerView={6}
-        slidesPerGroup={5}
+        slidesPerGroup={6}
         navigation
         loop={false}
       >
